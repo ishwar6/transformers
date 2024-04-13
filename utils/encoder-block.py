@@ -1,6 +1,18 @@
 import tensorflow as tf
 import numpy as np
 
+# Embeddings: First, each word in the sentence is converted into a numerical form that captures its meaning (token embedding). 
+# At the same time, each word's position in the sentence is also converted into a numerical form (positional embedding). 
+# This helps the model understand both what each word means and its relationship to other words in the sentence.
+
+# Dropout: Before we start processing these embeddings, we randomly drop out some of this information.
+# This is like intentionally forgetting some details to make sure our model doesn't rely too heavily on any particular piece of information, making it robust and generalized.
+
+# Encoder Blocks: The embeddings then pass through a series of processing steps (encoder blocks), 
+# each refining and adjusting the embeddings by considering how each word relates to others in the sentence. 
+# This happens repeatedly, enhancing the understanding of the sentence.
+
+    
 class Encoder(tf.keras.layers.Layer):
     def __init__(self, num_blocks, d_model, num_heads, hidden_dim, src_vocab_size,
                  max_seq_len, dropout_rate=0.1):
