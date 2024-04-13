@@ -75,7 +75,10 @@ encoder = Encoder(
     src_vocab_size,
     max_input_seq_len)
 
-
+encoder_output, attn_weights = encoder(padded_input_seqs, training=True, 
+                                       mask=enc_mask)
+print(f"Encoder output {encoder_output.shape}:")
+print(encoder_output)
 
 ######################################################################################################################################################
 ############################################################################## DEBUG ##################################################################
