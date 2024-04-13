@@ -83,7 +83,7 @@ def scaled_dot_product_attention(q, k, v, mask=None):
     return output, attention_weights
 
 
-
+# Main Multi Head Self Attention Class
 class MultiHeadSelfAttention(nn.Module):
     def __init__(self, d_model, num_heads):
         super(MultiHeadSelfAttention, self).__init__()
