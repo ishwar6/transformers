@@ -12,7 +12,6 @@
 # LayerNormalization (layernorm): This is like a cleaner who tidies up after the first tool (magic glasses) and the mini-factory have done their work. 
 # It makes sure everything is neat and in order so that the information looks nice and easy for the computer to read.
 
-
 # After all this, the box gives us a new version of the sentence that is easier for the computer to understand, along with a special note (attention weights) that tells us which words were seen as most important by the magic glasses. 
 # This helps the computer to later remember what was important in the sentence when it tries to use this information for tasks like answering questions or translating languages.
 
