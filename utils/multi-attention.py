@@ -83,6 +83,34 @@ print(output)
 
 
 
+################################ Debug Mode : ON #############################
+
+# Entering MultiHeadSelfAttention
+# MHSA Output Shape: (1, 3, 12)
+# Post-Dropout MHSA Output Shape: (1, 3, 12)
+# Post-LayerNorm1 Output Shape: (1, 3, 12)
+
+# Entering Feed Forward Network
+# FFN Output Shape: (1, 3, 12)
+# Post-Dropout FFN Output Shape: (1, 3, 12)
+# Final Output Shape from Encoder Block: (1, 3, 12)
+# Output from single encoder block (1, 3, 12):
+# tf.Tensor(
+# [[[-0.3847756  -0.33387783  0.76982546  0.8497208  -0.8858971
+#    -0.48990846  0.9594057   0.9769396  -0.48029894 -0.04240228
+#    -2.318786    1.3800544 ]
+#   [ 0.07458647 -0.6279474   0.45643866 -1.0298812   0.4622764
+#    -0.10734023  0.08881539  1.0231558   1.3502303  -0.08587222
+#    -2.5226183   0.9181567 ]
+#   [-0.14665551 -0.88339406  0.03083881 -1.8576676  -0.09421501
+#     0.5884591   0.5067914   0.8045433   0.97845304  0.25669065
+#    -1.7404709   1.5566266 ]]], shape=(1, 3, 12), dtype=float32)
+
+
+
+
+############################################################################################# pytorch implementation ####################################################################################################
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
