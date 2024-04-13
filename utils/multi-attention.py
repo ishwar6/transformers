@@ -40,3 +40,12 @@ class MultiHeadSelfAttention(tf.keras.layers.Layer):
     output = self.merge_heads(output)
 
     return self.dense(output), attn_weights
+
+
+
+
+mhsa = MultiHeadSelfAttention(12, 3)
+
+output, attn_weights = mhsa(x, x, x, None)
+print(f"MHSA output{output.shape}:")
+print(output)
