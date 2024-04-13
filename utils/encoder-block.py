@@ -54,7 +54,26 @@ bpemb_en.encode(input_batch)
 
 
 
+num_encoder_blocks = 6
 
+# d_model is the embedding dimension used throughout.
+d_model = 12
+
+num_heads = 3
+
+# Feed-forward network hidden dimension width.
+ffn_hidden_dim = 48
+
+src_vocab_size = bpemb_vocab_size
+max_input_seq_len = padded_input_seqs.shape[1]
+
+encoder = Encoder(
+    num_encoder_blocks,
+    d_model,
+    num_heads,
+    ffn_hidden_dim,
+    src_vocab_size,
+    max_input_seq_len)
 
 
 
