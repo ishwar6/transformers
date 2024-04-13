@@ -1,3 +1,21 @@
+# What are the parts of the EncoderBlock?
+# This box has several smaller tools inside it that help it do its job:
+
+# MultiHeadSelfAttention (mhsa): Think of this as a set of magic glasses. When the box looks at information through these glasses, 
+# it can see important parts of the information more clearly. These glasses help the box focus on what's really important in a bunch of words.
+
+# Feed Forward Network (ffn): This is like a mini-factory inside the box. Once the magic glasses have highlighted the important words, this mini-factory changes them slightly to make them even better and easier for the computer to understand.
+
+# Dropouts: These are like filters or sieves that randomly let some information through and block some. 
+# This helps in making sure the box doesn't rely too much on any one piece of information. It's like making sure you don’t just listen to one friend but get ideas from many friends.
+
+# LayerNormalization (layernorm): This is like a cleaner who tidies up after the first tool (magic glasses) and the mini-factory have done their work. 
+# It makes sure everything is neat and in order so that the information looks nice and easy for the computer to read.
+
+
+# After all this, the box gives us a new version of the sentence that is easier for the computer to understand, along with a special note (attention weights) that tells us which words were seen as most important by the magic glasses. 
+# This helps the computer to later remember what was important in the sentence when it tries to use this information for tasks like answering questions or translating languages.
+
 class MultiHeadSelfAttention(tf.keras.layers.Layer):
   def __init__(self, d_model, num_heads):
     super(MultiHeadSelfAttention, self).__init__()
