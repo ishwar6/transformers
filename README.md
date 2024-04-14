@@ -27,3 +27,25 @@ This repository is designed to be a comprehensive resource for understanding the
   - [Books](#books)
   - [Tutorials](#tutorials)
 - [Contributing](#contributing)
+
+
+## Introduction
+Transformers have revolutionized the way machines understand and generate human language. Introduced by Vaswani et al. in the seminal paper "Attention is All You Need", transformers have quickly become the backbone of modern NLP systems.
+
+## Basics of Deep Learning
+Before diving into transformers, it is essential to understand the foundational concepts of deep learning:
+- **Neural Networks**
+- **Backpropagation and Optimization**
+- **Sequence Modeling**: RNNs, GRUs, and LSTMs
+
+## Understanding Transformers
+### The Original Transformer
+Detail the architecture, key components like self-attention, and the reasons behind its effectiveness compared to prior models.
+
+### Key Concepts and Components
+- **Attention Mechanisms**
+- **Positional Encoding**
+- **Multi-Head Attention**
+- **Feed-Forward Networks**
+- **Layer Normalization**
+
