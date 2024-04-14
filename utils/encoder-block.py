@@ -11,7 +11,6 @@ import numpy as np
 # Encoder Blocks: The embeddings then pass through a series of processing steps (encoder blocks), 
 # each refining and adjusting the embeddings by considering how each word relates to others in the sentence. 
 # This happens repeatedly, enhancing the understanding of the sentence.
-
     
 class Encoder(tf.keras.layers.Layer):
     def __init__(self, num_blocks, d_model, num_heads, hidden_dim, src_vocab_size,
