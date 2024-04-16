@@ -30,3 +30,35 @@ import bitsandbytes as bnb
 
 
 # Reference: https://github.com/huggingface/transformers/blob/v4.39.3/src/transformers/utils/quantization_config.py#L182
+
+from datasets import load_dataset
+from transformers import (
+    AutoModelForCausalLM,
+    AutoTokenizer,
+    BitsAndBytesConfig,
+    HfArgumentParser,
+    AutoTokenizer,
+    TrainingArguments,
+    Trainer,
+    GenerationConfig
+)
+from tqdm import tqdm
+from trl import SFTTrainer
+import torch
+import time
+import pandas as pd
+import numpy as np
+
+#  to dynamically retrieves the float16 data type from the torch module
+compute_dtype = getattr(torch, "float16")
+
+# configuring an instance of BitsAndBytesConfig 
+bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,    # Model's weights should be loaded as 4-bit values. 
+        bnb_4bit_quant_type='nf4',
+        bnb_4bit_compute_dtype=compute_dtype,
+        bnb_4bit_use_double_quant=False,
+    )
+
+
+
