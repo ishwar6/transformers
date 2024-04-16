@@ -19,3 +19,11 @@ import bitsandbytes as bnb
 # recommended for NLP models
 - before: torch.nn.Embedding(...)
 + bnb.nn.StableEmbedding(...)
+
+
+# Qlora: https://www.youtube.com/watch?v=y9PHWGOa8HA
+
+# # In transformer Library: 
+# Quantization techniques reduce memory and computational costs by representing weights and activations with lower-precision data types like 8-bit integers (int8). 
+# This enables loading larger models you normally wouldn’t be able to fit into memory, and speeding up inference. 
+# Transformers supports the AWQ and GPTQ quantization algorithms and it supports 8-bit and 4-bit quantization with bitsandbytes.
