@@ -87,13 +87,20 @@ tokenizer.pad_token = tokenizer.eos_token  # Set pad token to EOS token for cons
 
 
 
+####################################### Step-1: Dataset Preprocessing #######################################
+ 
+max_length = get_max_length(original_model)
+ 
+
+train_dataset = preprocess_dataset(tokenizer, max_length,seed, dataset['train'])
+eval_dataset = preprocess_dataset(tokenizer, max_length,seed, dataset['validation'])
 
 
+####################################### Step-2: Preparing the Model for QLoRA #######################################
 
 
-
-
-
+from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+original_model = prepare_model_for_kbit_training(original_model)
 
 
 
