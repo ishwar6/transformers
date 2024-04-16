@@ -54,7 +54,7 @@ os.environ['WANDB_DISABLED']="true"
 huggingface_dataset_name = "neil-code/dialogsum-test"
 dataset = load_dataset(huggingface_dataset_name)
 
-
+########################################################################################################
 
 # Set compute data type for model training, using reduced precision (float16) for faster computation
 compute_dtype = getattr(torch, "float16")
@@ -74,4 +74,27 @@ original_model = AutoModelForCausalLM.from_pretrained(
     trust_remote_code=True,
     use_auth_token=True
 )
+
+
+####################################### Tokenizer Configuration #######################################
+
+tokenizer = AutoTokenizer.from_pretrained(
+    model_name, trust_remote_code=True, padding_side="left", 
+    add_eos_token=True, add_bos_token=True, use_fast=False
+)
+tokenizer.pad_token = tokenizer.eos_token  # Set pad token to EOS token for consistent end-of-sequence handling
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
