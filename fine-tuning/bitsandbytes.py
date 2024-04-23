@@ -12,7 +12,6 @@
 
 import bitsandbytes as bnb
 
-
 - adam = torch.optim.Adam(...)
 + adam = bnb.optim.Adam8bit(...)
 
