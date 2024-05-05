@@ -31,3 +31,38 @@ print(decoded_tokens)  # Output tokens with special tokens
 # Embeddings
 # Embeddings represent tokens as dense vectors in a continuous space. The following example shows how to use PyTorch’s embedding layer directly:
 
+
+import torch
+import torch.nn as nn
+
+# Initialize an embedding layer
+vocab_size = 1000  #  vocabulary size
+embedding_dim = 50  # Dimensionality of the embeddings
+embedding = nn.Embedding(vocab_size, embedding_dim)
+
+
+# Token indices (batch size of 3 sentences, each with 4 tokens)
+input_indices = torch.tensor([[4, 56, 5, 12], [7, 1, 45, 9], [34, 12, 23, 10]])
+embedded_vectors = embedding(input_indices)
+print(embedded_vectors)  # Each token index is converted to an embedding vector
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
