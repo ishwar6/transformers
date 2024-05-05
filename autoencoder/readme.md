@@ -62,7 +62,7 @@ trainer = Trainer(model=model, args=training_args, train_dataset=train_dataset)
 
 # Train the model
 trainer.train()
-
+```
 
 ## Tokenization Algorithms:
 1. WordPiece: Breaks words into smaller subword units to handle unknown tokens and reduce vocabulary size.
