@@ -48,12 +48,24 @@ print(embedded_vectors)  # Each token index is converted to an embedding vector
 
 
 
+# When working with pre-trained models like BERT, embeddings are integrated within the model. Here's an example with a BERT model:
 
 
 
+from transformers import BertModel
 
+# Load a pre-trained BERT model
+model = BertModel.from_pretrained('bert-base-uncased')
 
+# So this is time to tokenize text
+text = "Transformers are powerful tools for NLP tasks."
+inputs = tokenizer(text, return_tensors='pt', add_special_tokens=True)
 
+# Now, lets pass the tokens to the model
+outputs = model(**inputs)
+ 
+embeddings = outputs.last_hidden_state
+print(embeddings)  # The embeddings for each token in the input text
 
 
 
