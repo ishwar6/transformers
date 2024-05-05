@@ -44,3 +44,5 @@ python run_glue.py \
     --num_train_epochs 3 \
     --output_dir /tmp/$TASK_NAME/
 
+# This command leverages the run_glue.py script to fine-tune the bert-base-cased model on the SST-2 task.
+
