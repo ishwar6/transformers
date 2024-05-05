@@ -63,3 +63,12 @@ trainer = Trainer(model=model, args=training_args, train_dataset=train_dataset)
 # Train the model
 trainer.train()
 
+
+## Tokenization Algorithms:
+1. WordPiece: Breaks words into smaller subword units to handle unknown tokens and reduce vocabulary size.
+2. Byte-Pair Encoding (BPE): Similar to WordPiece, but merges frequently occurring character pairs.
+3. SentencePiece: A language-agnostic tokenizer used in models like T5 and ALBERT.
+
+## Using Pre-trained Models:
+1. Models and tokenizers can be easily loaded using Hugging Face's transformers library.
+2. Tokenization algorithms like BertTokenizerFast and RobertaTokenizer facilitate the processing of various languages with different vocabularies.
