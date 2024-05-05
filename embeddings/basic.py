@@ -27,3 +27,7 @@ print(tokens)  # Token indices
 decoded_tokens = tokenizer.convert_ids_to_tokens(tokens)
 print(decoded_tokens)  # Output tokens with special tokens
 
+
+# Embeddings
+# Embeddings represent tokens as dense vectors in a continuous space. The following example shows how to use PyTorch’s embedding layer directly:
+
