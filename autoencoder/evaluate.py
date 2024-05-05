@@ -31,7 +31,7 @@
 # Successors:
 # SuperGLUE is an advanced version of GLUE that offers more challenging tasks for evaluating state-of-the-art models.
 
-
+# run_glue.py is a script provided by Hugging Face to easily fine-tune pre-trained models on any GLUE task. It enables quick experimentation and benchmarking for NLP models.
 export TASK_NAME="sst2"
 python run_glue.py \
     --model_name_or_path bert-base-cased \
