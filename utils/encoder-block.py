@@ -5,6 +5,7 @@ import numpy as np
 # At the same time, each word's position in the sentence is also converted into a numerical form (positional embedding). 
 # This helps the model understand both what each word means and its relationship to other words in the sentence.
 
+
 # Dropout: Before we start processing these embeddings, we randomly drop out some of this information.
 # This is like intentionally forgetting some details to make sure our model doesn't rely too heavily on any particular piece of information, making it robust and generalized.
 
