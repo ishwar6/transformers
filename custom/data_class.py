@@ -2,6 +2,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 from transformers import GPT2Tokenizer
 
+
 class GPTDatasetV1(Dataset):
     def __init__(self, txt, tokenizer, max_length, stride):
         self.tokenizer = tokenizer
