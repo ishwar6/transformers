@@ -52,6 +52,7 @@ def train_daily():
  
 schedule.every().day.at("02:00").do(train_daily)
 
+
 while True:
     schedule.run_pending()
     time.sleep(1)
