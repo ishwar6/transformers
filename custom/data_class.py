@@ -26,4 +26,25 @@ class GPTDatasetV1(Dataset):
         return self.input_ids[idx], self.target_ids[idx]
 
 
+if __name__ == "__main__":
+  
+    tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+
+  
+    text_data = (
+        "Artificial Intelligence is revolutionizing industries. "
+        "It holds the potential to transform many aspects of daily life."
+    )
+
+
+    dataset = GPTDatasetV1(txt=text_data, tokenizer=tokenizer, max_length=20, stride=10)
+
+    # Create a DataLoader instance for batching
+    dataloader = DataLoader(dataset, batch_size=2, shuffle=True)
+
+    # Iterate through batches
+    for batch_idx, (input_ids, target_ids) in enumerate(dataloader):
+        print(f"Batch {batch_idx + 1}")
+        print("Input IDs:", input_ids)
+        print("Target IDs:", target_ids)
 
