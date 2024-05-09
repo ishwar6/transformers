@@ -28,3 +28,11 @@ To decode a sequence of tokens back to a readable text string:
 decoded_text = tokenizer.decode(token_ids)
 print(decoded_text)  # Output: "Hello, world!"
 ```
+
+
+## Tokenization Concepts
+1. Word-Based Tokenization: This involves splitting text by spaces to extract words. It's simple but can miss nuances like punctuation or contraction.
+2. Character-Based Tokenization: Each character is treated as a token. Useful for text generation but computationally expensive.
+3. Subword Tokenization: Splits text into meaningful subwords using techniques like Byte-Pair Encoding (BPE). This is used in state-of-the-art NLP models like GPT.
+4. Regular Expression Tokenization: Allows custom splitting patterns like ([,.?_!"()\']|--|\s) in our implementation, which handles punctuations efficiently.
+5. Error Handling: During encoding or decoding, errors can occur if tokens are missing from the vocabulary. The SimpleTokenizerV1 class will raise ValueError for these cases, helping debug data issues.
