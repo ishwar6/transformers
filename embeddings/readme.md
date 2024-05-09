@@ -20,3 +20,11 @@ text = "Hello, world!"
 token_ids = tokenizer.encode(text)
 print(token_ids)  # Output: [1, 3, 2, 4]
 ```
+
+### Decoding
+To decode a sequence of tokens back to a readable text string:
+
+```python
+decoded_text = tokenizer.decode(token_ids)
+print(decoded_text)  # Output: "Hello, world!"
+```
