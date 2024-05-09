@@ -10,3 +10,13 @@ To initialize the tokenizer, provide a vocabulary dictionary mapping strings to 
 ```python
 vocab = {'Hello': 1, 'world': 2, ',': 3, '!': 4}
 tokenizer = SimpleTokenizerV1(vocab)
+```
+
+### Encoding
+To encode a text string into tokens:
+
+```python
+text = "Hello, world!"
+token_ids = tokenizer.encode(text)
+print(token_ids)  # Output: [1, 3, 2, 4]
+```
