@@ -1,7 +1,6 @@
 # Summary: Fine-tuning a BERT Model for Single-Sentence Binary Classification
 
 # In this section, we demonstrate how to fine-tune a pre-trained BERT model for sentiment analysis using the IMDb dataset. The pre-trained model used is DistilBertForSequenceClassification, a distilled version of BERT with a classification head at the top.
-
 # Key Steps
 
 # 1. Setup and Initialization:
