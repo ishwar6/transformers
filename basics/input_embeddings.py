@@ -29,3 +29,37 @@ class InputEmbedding(nn.Module):
 # scaling is performed to counteract the effect of the dot-product growing large in magnitude when the dimensionality is high. 
 #   This helps in stabilizing gradients early in training.
                                         
+
+
+#### OPTIMISATIONS  #####
+
+class InputEmbeddingOptimised(nn.Module):
+  def __init__(self, d_model:int, vocab_size:int, dropout: float = 0.1):
+    self.d_model = d_model
+    self.vocab_size = vocab_size
+    self.embedding = nn.Embedding(vocab_size, d_model)
+    self.scale = math.sqrt(d_model)
+    self.dropout = nn.Dropout(dropout)
+
+  def forward(self, x):
+    x = self.embedding(x) * self.scale
+    return self.dropout(x) # we apply dropout for regularization.
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
