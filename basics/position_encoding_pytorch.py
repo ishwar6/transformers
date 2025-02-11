@@ -35,3 +35,18 @@ encoded_tokens = pos_encoding_layer(embedding_tokens)
 
 # Print final result
 print("\nFinal Embeddings After Adding PE:\n", encoded_tokens)
+
+
+
+
+# [DEBUG] Input Shape: torch.Size([3, 12288])
+# [DEBUG] Positional Encoding Shape: torch.Size([1, 3, 12288])
+# [DEBUG] Output Shape After Adding PE: torch.Size([1, 3, 12288])
+
+# Final Embeddings After Adding PE:
+#  tensor([[[ -18.2410,   -0.0000, -106.3610,  ...,   78.7416,   16.1874,
+#           -143.5334],
+#          [ -67.6987,   56.4681,  -45.8034,  ..., -184.7881, -297.2361,
+#           -115.9084],
+#          [ 228.6305,   77.1439,  108.0852,  ...,   51.9746,   61.7931,
+#             25.7511]]], grad_fn=<MulBackward0>)
