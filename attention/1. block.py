@@ -9,7 +9,7 @@
 # we divide this new Q, new K and new V into h blocks (h of multihead attentions): we split matrix along embedding dimension: 
 # which means each head get full sentence (sequence) but diff part of embedding of each word. : #attending to different parts of the input representation
 # we apply attention formula to each head and finally combine by concat formula. 
-# in concat we have w_o = (h * d_v, d_model)
+# in concat we have w_o = (h * d_v, d_model) => Output projection matrix of shape (d_model, d_model)
 
 
 import torch
@@ -26,6 +26,30 @@ class MultiHeadAttentionBlock(nn.module):
     self.w_q = nn.Linear(d_model, d_model)
     self.w_k = nn.Linear(d_model, d_model)
     self.w_v = nn.Linear(d_model, d_model)
+
+    self.w_o = nn.Linear(d_model, d_model)
+    self.dropout = nn.Dropout(dropout)
+
+
+  def forward(self, q, k, v, mask): 
+    query = self.w_q(q)
+    key = self.w_k(k)
+    value = self.w_v(v)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       
     
