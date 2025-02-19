@@ -9,6 +9,7 @@
 # we divide this new Q, new K and new V into h blocks (h of multihead attentions): we split matrix along embedding dimension: 
 # which means each head get full sentence (sequence) but diff part of embedding of each word. : #attending to different parts of the input representation
 # we apply attention formula to each head and finally combine by concat formula. 
+# in concat we have w_o = (h * d_v, d_model)
 
 
 import torch
@@ -19,7 +20,16 @@ class MultiHeadAttentionBlock(nn.module):
     super().__init__()
     self.d_model = d_model
     self.h = h
-    assert d_model % h == 0 "No of heads should be divisible by d_model"
+    assert d_model % h == 0, "No of heads should be divisible by d_model"
+    self.d_k = d_model // h
+    # each weights are of (d_model * d_model)
+    self.w_q = nn.Linear(d_model, d_model)
+    self.w_k = nn.Linear(d_model, d_model)
+    self.w_v = nn.Linear(d_model, d_model)
+
+      
+    
+    
     
 
 
