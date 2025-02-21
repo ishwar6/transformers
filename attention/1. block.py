@@ -10,7 +10,7 @@
 # which means each head get full sentence (sequence) but diff part of embedding of each word. : #attending to different parts of the input representation
 # we apply attention formula to each head and finally combine by concat formula. 
 # in concat we have w_o = (h * d_v, d_model) => Output projection matrix of shape (d_model, d_model)
-
+# batch operations
 
 import torch
 import torch.nn as nn
