@@ -4,7 +4,6 @@
 
 
 # Key Aspects of GLUE:
-
 # Tasks:
 # GLUE consists of nine different tasks, each testing different aspects of language understanding. These tasks include:
 # CoLA (Corpus of Linguistic Acceptability): Binary classification of whether a sentence is grammatically correct or not.
